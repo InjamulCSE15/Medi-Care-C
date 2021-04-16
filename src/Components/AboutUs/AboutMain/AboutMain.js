@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutMain.css';
-import team from '../../../../pictures/team-doctors-standing-together-hospital-premises.jpg';
+import team from '../../../pictures/team-doctors-standing-together-hospital-premises.jpg';
 const AboutMain = () => {
     return (
         <section className="main-container" id="about">
