@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../../App';
 import BookForm from '../BookForm/BookForm';
 import './AppointmentCard.css';
 
 const AppointmentCard = ({ booking, date }) => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [modalIsOpen, setIsOpen] = useState(false);
+    
     function openModal() {
+        if(!loggedInUser){
         setIsOpen(true);
+        }
     }
 
     function closeModal() {
         setIsOpen(false);
     }
+
 
 
     return (
@@ -23,7 +30,7 @@ const AppointmentCard = ({ booking, date }) => {
                     <h3 class="text-justify mb-2">{booking.subject}</h3>
                     <h5 class="text-justify">{booking.visitingHour}</h5>
                     <h6 className="text-danger">Available Bookings: {booking.totalSpace}</h6>
-                    <button onClick={openModal} className="btn btn-outline-dark mt-3 text-uppercase">Get Service</button>
+                    <Link to={`/appointment/${booking.subject}`}><button onClick={openModal} className="btn btn-outline-dark mt-3 text-uppercase">Get Service</button></Link>
                     <BookForm modalIsOpen={modalIsOpen} closeModal={closeModal} bookingOn={booking.subject} date={date} />
                 </div>
             </div>
