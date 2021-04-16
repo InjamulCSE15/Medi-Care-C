@@ -1,12 +1,12 @@
 import React from 'react';
-import icon from '../../../pictures/favicon-32x32.png';
+
 
 
 const NavBar = () => {
     return (
         <nav class="container navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/home"><img src={icon} alt="" srcset=""/></a>
+                <a class="navbar-brand pt-2" href="/home"><h2>Medicare</h2></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
