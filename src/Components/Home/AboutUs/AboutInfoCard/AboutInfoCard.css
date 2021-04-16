@@ -1,0 +1,8 @@
+.card-container:hover {
+    background-color: rgb(54, 22, 231);
+    color: white;
+}
+
+.info-icon {
+font-size: 3rem;
+}

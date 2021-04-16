@@ -1,0 +1,17 @@
+.footer-area{
+    background-image: linear-gradient(to right, rgb(1, 50, 69) 0%, rgb(0, 35, 49) 100%);
+background-size: auto;
+}
+
+.social-media .media-icon{
+    height: 40px;
+    width: 40px;
+    color: #1cc7c1;
+    border-radius: 50%;
+    border: 1px solid #6ACECE;
+    padding: 10px;
+}
+.social-media .media-icon:hover {
+    background-color: #6ACECE ;
+    color:white;
+}

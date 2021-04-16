@@ -1,0 +1,13 @@
+.medicare-container {
+    background-color: teal;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 5%;
+}
+h1{
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    color: white;
+    font-size: xxx-large;
+}
+

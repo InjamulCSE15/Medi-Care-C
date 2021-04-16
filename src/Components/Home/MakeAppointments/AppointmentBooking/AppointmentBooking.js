@@ -1,0 +1,101 @@
+import React from 'react';
+import AppointmentCard from '../AppointmentCard/AppointmentCard';
+import heart from '../../../../pictures/heart.png';
+import teeth from '../../../../pictures/tooth.png';
+import eye from '../../../../pictures/loupe.png';
+import orthopedics from '../../../../pictures/orthopedics.png';
+import blood from '../../../../pictures/blood-bag.png';
+import neuron from '../../../../pictures/neurosurgery.png';
+import kidney from '../../../../pictures/kidneys.png';
+import surgery from '../../../../pictures/surgery-room.png';
+
+
+
+const bookingData = [
+    {
+
+        id: 1,
+        subject: 'Cardiology',
+        visitingHour: '8:00 AM - 9:00 PM',
+        img: heart,
+        totalSpace: 10
+    },
+    {
+
+        id: 2,
+        subject: 'Dental Care',
+        visitingHour: '10:50 AM - 11:30 PM',
+        img: teeth,
+        totalSpace: 5
+    },
+    {
+
+        id: 3,
+        subject: 'Eye Care',
+        visitingHour: '8:00 AM - 6:00 PM',
+        img: eye,
+        totalSpace: 10
+    },
+    {
+
+        id: 4,
+        subject: 'Orthopedics',
+        visitingHour: '7:00 AM - 8:30 PM',
+        img: orthopedics,
+        totalSpace: 5
+    },
+    {
+
+        id: 5,
+        subject: 'Surgery & OT',
+        visitingHour: '24 Hours',
+        img: surgery,
+        totalSpace: 10
+    },
+    {
+
+        id: 6,
+        subject: 'Neurologists',
+        visitingHour: '11:00 AM - 10:00 PM',
+        img: neuron,
+        totalSpace: 10
+    },
+    {
+
+        id: 7,
+        subject: 'Nephrologists',
+        visitingHour: '9:00 PM - 6:00 PM',
+        img: kidney,
+        totalSpace: 10
+    },
+    {
+
+        id: 8,
+        subject: 'Blood Transformation & Donation',
+        visitingHour: '24 Hours',
+        img: blood,
+        totalSpace: 10
+    }
+]
+
+
+const AppointmentBooking = ({ date }) => {
+    return (
+        <section id="services" className="mt-5 bg-dark pb-4">
+            <div className="text-center mt-3">
+                <h1 className="pt-2">Our Services</h1>
+                <h3 className="text-center text-brand mt-3 mb-5" style={{color: 'tomato'}}>Available Appointments on {date.toDateString()}</h3>
+             
+            </div>
+
+            <div className="container row row-cols-md-4 g-3 m-auto">
+                {
+                    bookingData.map(booking => <AppointmentCard booking={booking} date={date} key={booking.id} />)
+                }
+            </div>
+        </section>
+
+    );
+};
+
+export default AppointmentBooking;

@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.text-style {
+  font-family: 'Karantina', cursive;
+  font-weight: 400;
+  font-size: x-large;
+  color: white;
+}

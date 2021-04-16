@@ -1,0 +1,9 @@
+.text-link {
+    text-decoration: none;
+}
+.text-link:hover {
+    color: #1d04fa;
+}
+hr {
+    color: white;
+}
