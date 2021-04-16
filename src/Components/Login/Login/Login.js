@@ -4,7 +4,9 @@ import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../../../App';
 import { useHistory, useLocation } from 'react-router-dom';
-import LoginBg from '../../../images/Group 140.png';
+import LoginBg from '../../../pictures/login.jpg';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Login = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -41,24 +43,22 @@ const Login = () => {
 
     return (
         <div className="login-page container">
-            <div className="row align-items-center" style={{ height: "100vh" }}>
+            <div className="row d-flex align-items-center" style={{ height: "100vh" }}>
                 <div className="col-md-6 shadow p-5">
-                    <div className="form-group">
-                        <label htmlFor="">User Name</label>
-                        <input type="text" className="form-control" />
+                    <div className="form-group p-2">
+                        <input type="text" className="form-control" placeholder="Enter your name" />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="">Password</label>
-                        <input type="password" className="form-control" />
+                    <div className="form-group p-2">
+                        <input type="password" className="form-control" placeholder="Enter your password" />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group p-2">
                         <label htmlFor="" className="text-danger">Forgot your password?</label>
                     </div>
                     <div className="from-group mt-5">
-                        <button className="btn btn-brand" onClick={handleGoogleSignIn}>Google Sign in</button>
+                        <button className="btn btn-outline-danger" onClick={handleGoogleSignIn}><FontAwesomeIcon icon={faGoogle}/> Google Sign in</button>
                     </div>
                 </div>
-                <div className="col-md-6 d-none d-md-block align-self-end">
+                <div className="col-md-5 me-2 py-2">
                     <img className="img-fluid" src={LoginBg} alt="" />
                 </div>
             </div>
