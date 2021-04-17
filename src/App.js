@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import AllUsers from './Components/AllUsers/AllUsers/AllUsers';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import Home from './Components/Home/Home/Home';
 import Appointment from './Components/Home/MakeAppointments/Appointment/Appointment';
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/dashboard/appointments">
           <DashBoard/>
+        </Route>
+        <Route path="/dashboard/allappointments">
+          <AllUsers/>
         </Route>
         <Route path="/login">
           <Login/>
