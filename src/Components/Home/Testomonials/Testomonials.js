@@ -47,6 +47,26 @@ const patientsData = [
         iconFb: faFacebook,
         iconGmail: faGoogle,
         iconCall: faMobileAlt,
+    },
+    {
+        id: 5,
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
+        name: 'Alinso Gomez',
+        from: 'California',
+        img: alinso,
+        iconFb: faFacebook,
+        iconGmail: faGoogle,
+        iconCall: faMobileAlt,
+    },
+    {
+        id: 6,
+        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic non architecto nobis, adipisci recusandae repellat accusantium consequuntur, qui nisi deserunt blanditiis mollitia, illo! ',
+        name: 'Ema Gomez',
+        from: 'California',
+        img: ema,
+        iconFb: faFacebook,
+        iconGmail: faGoogle,
+        iconCall: faMobileAlt,
     }
 ]
 

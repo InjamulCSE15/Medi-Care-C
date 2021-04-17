@@ -4,7 +4,7 @@ import './SpecialCare.css'
 const SpecialCare = ({ special }) => {
     return (
         <div className="col care-card">
-            <div class="card h-100">
+            <div class="container card h-100 m-auto">
                 <div class="text-center m-auto p-5">
                 <img src={special.img} class="card-img-top" alt="..." />
                 </div>

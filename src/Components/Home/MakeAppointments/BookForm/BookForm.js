@@ -14,23 +14,23 @@ const BookForm = ({ modalIsOpen, closeModal, bookingOn, date }) => {
         console.log(data);
         closeModal();
         alert('Your Appointment Successfully Done');
-        // data.service = bookingOn;
-        // data.date = date;
-        // data.created = new Date();
+        data.service = bookingOn;
+        data.date = date;
+        data.created = new Date();
 
-        // fetch('http://localhost:5000/addAppointment',
-        //     {
-        //         method: 'POST',
-        //         headers: { 'content-type': 'application/json' },
-        //         body: JSON.stringify(data)
-        //     })
-        //     .then(res => res.json())
-        //     .then(success => {
-        //         if (success) {
-        //             closeModal();
-        //             alert('Your appointment successful.');
-        //         }
-        //     })
+        fetch('http://localhost:5000/addAppointment',
+            {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(success => {
+                if (success) {
+                    closeModal();
+                    alert('Your appointment created successfully.');
+                }
+            })
 
     }
     return (
@@ -38,10 +38,11 @@ const BookForm = ({ modalIsOpen, closeModal, bookingOn, date }) => {
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             contentLabel="Example Modal"
+            className="container mt-5 card"
         >
-            <h2 className="text-center">{bookingOn}</h2>
+            <h2 className="text-center p-4">{bookingOn}</h2>
             <h4 className="text-center">ON {date.toDateString()}</h4>
-            <form className="p-1" onSubmit={handleSubmit(onSubmit)}>
+            <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-group p-2">
                     <input type="text" className="form-control" placeholder="Enter your name" name="name"{...register("name", { required: true })} />
                     {errors.name && <span className="text-danger">This field is required</span>}

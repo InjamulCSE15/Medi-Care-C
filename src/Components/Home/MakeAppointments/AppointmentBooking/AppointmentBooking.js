@@ -18,6 +18,7 @@ const bookingData = [
         subject: 'Cardiology',
         visitingHour: '8:00 AM - 9:00 PM',
         img: heart,
+        price: 500,
         totalSpace: 10
     },
     {
@@ -26,6 +27,7 @@ const bookingData = [
         subject: 'Dental Care',
         visitingHour: '10:50 AM - 11:30 PM',
         img: teeth,
+        price: 100,
         totalSpace: 5
     },
     {
@@ -34,6 +36,7 @@ const bookingData = [
         subject: 'Eye Care',
         visitingHour: '8:00 AM - 6:00 PM',
         img: eye,
+        price: 200,
         totalSpace: 10
     },
     {
@@ -42,6 +45,7 @@ const bookingData = [
         subject: 'Orthopedics',
         visitingHour: '7:00 AM - 8:30 PM',
         img: orthopedics,
+        price: 150,
         totalSpace: 5
     },
     {
@@ -50,6 +54,7 @@ const bookingData = [
         subject: 'Surgery & OT',
         visitingHour: '24 Hours',
         img: surgery,
+        price: 500,
         totalSpace: 10
     },
     {
@@ -58,6 +63,7 @@ const bookingData = [
         subject: 'Neurologists',
         visitingHour: '11:00 AM - 10:00 PM',
         img: neuron,
+        price: 300,
         totalSpace: 10
     },
     {
@@ -66,6 +72,7 @@ const bookingData = [
         subject: 'Nephrologists',
         visitingHour: '9:00 PM - 6:00 PM',
         img: kidney,
+        price: 400,
         totalSpace: 10
     },
     {
@@ -74,6 +81,7 @@ const bookingData = [
         subject: 'Blood Transformation & Donation',
         visitingHour: '24 Hours',
         img: blood,
+        price: 200,
         totalSpace: 10
     }
 ]

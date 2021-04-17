@@ -5,9 +5,9 @@ import './DoctorCard.css';
 const DoctorCard = ({ doctor }) => {
     return (
         <section className="col">
-            <div class="card h-100">
-                <div class="m-auto pt-3">
-                    <img src={doctor.pic} className="img-fluid" style={{ borderRadius: '50%' }} alt="" />
+            <div class="container card h-100">
+                <div class="text-center">
+                    <img src={doctor.pic} className="img-fluid m-auto pt-3" style={{ borderRadius: '50%' }} alt="" />
                 </div>
                 <div>
                     <div class="text-center pt-5">

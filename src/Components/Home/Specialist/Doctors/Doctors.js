@@ -4,7 +4,7 @@ import { faFacebook, faGoogle, faYoutube } from '@fortawesome/free-brands-svg-ic
 import DoctorCard from '../DoctorCard/DoctorCard';
 import tania from '../../../../pictures/tania.jpg';
 import afsarul from '../../../../pictures/afsar (2).jpg';
-import abdurrahim from '../../../../pictures/abdurkarim (2).jpg';
+import abdurrahim from '../../../../pictures/abdurrahim (2).jpg';
 import abdurkarim from '../../../../pictures/abdurkarim (2).jpg';
 
 

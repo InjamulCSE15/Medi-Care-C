@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import './App.css';
+import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import Home from './Components/Home/Home/Home';
 import Appointment from './Components/Home/MakeAppointments/Appointment/Appointment';
 import PrivateRoute from './Components/Home/PrivateRoute/PrivateRoute';
@@ -24,9 +25,12 @@ function App() {
         <Route path="/home">
           <Home/>
         </Route>
-        <PrivateRoute path="/appointment">
+        <Route path="/appointment">
           <Appointment/>
-        </PrivateRoute>
+        </Route>
+        <Route path="/dashboard/appointments">
+          <DashBoard/>
+        </Route>
         <Route path="/login">
           <Login/>
         </Route>

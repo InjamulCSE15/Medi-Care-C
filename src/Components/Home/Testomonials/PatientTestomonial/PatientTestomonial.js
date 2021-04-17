@@ -5,9 +5,9 @@ import './PatientTestomonial.css';
 const PatientTestomonial = ({review}) => {
     return (
         <section className="col">
-            <div class="card h-100">
-                <div class="m-auto pt-3">
-                    <img src={review.img} className="img-fluid" style={{ borderRadius: '50%', height: '100px'}} alt="" />
+            <div class="card container h-100">
+                <div class="text-center">
+                    <img src={review.img} className="img-fluid pt-3" style={{ borderRadius: '50%', height: '150px'}} alt="" />
                 </div>
                 <div>
                     <div class="text-center pt-5">

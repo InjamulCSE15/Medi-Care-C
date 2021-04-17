@@ -39,7 +39,7 @@ const SpecialMediCare = () => {
                 <p className="text-white"><small>We provide the best services for your health</small></p>
             </div>
 
-            <div className="container row row-cols-md-4 g-3 m-auto">
+            <div className="container row cols-md-4 g-3 m-auto">
                 {
                     specialData.map(special => <SpecialCare special={special} />)
                 }
