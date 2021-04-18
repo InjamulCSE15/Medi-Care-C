@@ -1,4 +1,4 @@
-.sidebar{
+/* .sidebar{
     background-image: linear-gradient(40deg, #19d3ae,#0fcfec);
     position: fixed;
 }
@@ -11,4 +11,23 @@
 }
 .sidebar svg{
     margin-right: 5px;
-}
+} */
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+  
+  @media (min-width: 768px) {
+    #sidebar-wrapper {
+      margin-left: 0;
+    }
+  
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+    }
+  }

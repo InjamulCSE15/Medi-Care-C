@@ -11,7 +11,7 @@ const AppointmentTable = ({appointments}) => {
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody className="text-white">
+                <tbody className="text-primary">
                     {
                         appointments.map((app, index) =>
                             <tr key={app._id}>
