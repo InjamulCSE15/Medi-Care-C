@@ -18,7 +18,7 @@ const BookForm = ({ modalIsOpen, closeModal, bookingOn, date }) => {
         data.date = date;
         data.created = new Date();
 
-        fetch('http://localhost:5000/addAppointment',
+        fetch('https://vast-thicket-09583.herokuapp.com/addAppointment',
             {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
