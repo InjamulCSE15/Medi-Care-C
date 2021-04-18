@@ -32,13 +32,13 @@ const AppointmentCard = ({ service, date }) => {
                     <img src={service.img} class="card-img-top" alt="..." />
                 </div>
                 <div class="card-body text-center">
-                    <h3 class="text-justify mb-2">{service.name}</h3>
+                    <h3 class="text-justify mb-2">{service.subject}</h3>
                     <h5 class="text-justify">{service.time}</h5>
                     <h4 class="text-primary">Booking Cost: $ {service.price}</h4>
                     <h6 className="text-danger">Available Bookings: {service.space}</h6>
                     {/* <Link to={`/myappointment/${booking.subject}`}><button className="btn btn-outline-dark mt-3 text-uppercase">Get Service</button></Link> */}
                     <button onClick={openModal} className="btn btn-outline-dark mt-3 text-uppercase">Get Service</button>
-                    <BookForm modalIsOpen={modalIsOpen} closeModal={closeModal} bookingOn={service.name} date={date} />
+                    <BookForm modalIsOpen={modalIsOpen} closeModal={closeModal} bookingOn={service.subject} date={date} />
                 </div>
             </div>
         </div>
