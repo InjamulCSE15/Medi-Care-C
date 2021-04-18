@@ -1,7 +1,7 @@
 import React from 'react';
 import './SideBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUsers, faNotesMedical, faHome } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUsers, faNotesMedical, faHome, faCommentAlt, faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -16,7 +16,9 @@ const SideBar = () => {
                     <a href="/" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faHome} /> <span>Home</span></a>
                     <a href="/dashboard" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span></a>
                     <a href="/appointment" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faCalendar} /> <span>Appointment</span></a>
-                    <a href="/addservice" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faNotesMedical} /> <span>Add Service</span></a>
+                    <a href="/addreview" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faCommentAlt} /> <span>Review</span></a>
+                    <a href="/payment" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faMoneyCheckAlt} /> <span>Payment</span></a>
+                    <a href="/addService" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faNotesMedical} /> <span>Add Service</span></a>
                     <a href="#" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faCog} /> <span>Setting</span></a>
                     <a href="#" class="list-group-item list-group-item-action text-white bg-dark"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></a>
 

@@ -7,6 +7,7 @@ import {
 import './App.css';
 import AddService from './Components/AddService/AddService';
 import AllUsers from './Components/AllUsers/AllUsers/AllUsers';
+import UserReview from './Components/DashBoard/AppointmentsByDate/UserReview/UserReview';
 import DashBoard from './Components/DashBoard/DashBoard/DashBoard';
 import Home from './Components/Home/Home/Home';
 import Appointment from './Components/Home/MakeAppointments/Appointment/Appointment';
@@ -41,6 +42,9 @@ function App() {
         </Route>
         <Route path="/addService">
             <AddService/>
+          </Route>
+        <Route path="/addreview">
+            <UserReview/>
           </Route>
         <Route path="/login">
           <Login/>

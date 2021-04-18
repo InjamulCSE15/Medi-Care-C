@@ -14,6 +14,8 @@ Extra Features for this assignment(for Bonus Marks):
 3.Try to Responsive the Home page
 4.One section extra added
 5.Readme file customized
+6.Every link button work perfectly
+7.
 
 Live Site link: https://medi-care-assignment-11.web.app/
 

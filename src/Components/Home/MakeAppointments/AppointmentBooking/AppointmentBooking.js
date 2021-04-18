@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AppointmentCard from '../AppointmentCard/AppointmentCard';
 import heart from '../../../../pictures/heart.png';
 import teeth from '../../../../pictures/tooth.png';
@@ -8,10 +8,7 @@ import blood from '../../../../pictures/blood-bag.png';
 import neuron from '../../../../pictures/neurosurgery.png';
 import kidney from '../../../../pictures/kidneys.png';
 import surgery from '../../../../pictures/surgery-room.png';
-
-
-
-const bookingData = [
+const services = [
     {
 
         id: 1,
@@ -87,7 +84,14 @@ const bookingData = [
 ]
 
 
+
 const AppointmentBooking = ({ date }) => {
+    // const [services, setServices] = useState([])
+    // useEffect( () => {
+    //     fetch('http://localhost:5000/services')
+    //     .then(res => res.json())
+    //     .then(data =>console.log(data))
+    // }, [])
     return (
         <section id="services" className="mt-5 bg-dark pb-4">
             <div className="text-center mt-3">
@@ -98,7 +102,7 @@ const AppointmentBooking = ({ date }) => {
 
             <div className="container row row-cols-md-4 g-3 m-auto">
                 {
-                    bookingData.map(booking => <AppointmentCard booking={booking} date={date} key={booking.id} />)
+                    services.map(service => <AppointmentCard service={service} date={date} key={service.id} />)
                 }
             </div>
         </section>

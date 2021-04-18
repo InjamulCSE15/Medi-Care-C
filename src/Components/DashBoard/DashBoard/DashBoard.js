@@ -31,7 +31,7 @@ const DashBoard = () => {
 
 
     return (
-        <section>
+        <section class="w-100">
             <div class="d-flex">
 
             <SideBar />

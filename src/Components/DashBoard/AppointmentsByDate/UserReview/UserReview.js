@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import SideBar from '../DashBoard/SideBar/SideBar';
+import SideBar from '../../SideBar/SideBar';
 
-const AddService = () => {
+const UserReview = () => {
     const [info, setInfo] = useState({});
     const [file, setFile] = useState(null);
     const handleBlur = e => {
@@ -19,13 +19,13 @@ const AddService = () => {
     const handleSubmit = () => {
         const formData = new FormData()
         console.log(info);
-        formData.append('file', file);
+        formData.append('img', file);
         formData.append('name', info.name);
-        formData.append('time', info.time);
-        formData.append('price', info.price);
-        formData.append('space', info.space);
+        formData.append('post', info.quote);
+        formData.append('from', info.from);
+        formData.append('contact', info.phone);
 
-        fetch('https://localhost:5000/addService', {
+        fetch('https://vast-thicket-09583.herokuapp.com/addreview', {
             method: 'POST',
             body: formData
         })
@@ -37,34 +37,33 @@ const AddService = () => {
                 console.error(error)
             })
     }
-
     return (
         <section className="container-fluid row">
-            <SideBar/>
+            <SideBar />
             <div className="col-md-10 me-5 pe-5" style={{ position: "absolute", right: 0, backgroundColor: "#212529" }}>
-                <h4 className="App-link pt-3">Add a Service</h4>
+                <h4 className="App-link">My review for this service</h4>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group pt-2">
                         <input onBlur={handleBlur} type="name" className="form-control" name="name" placeholder="Enter Service Name" />
                     </div>
                     <div className="form-group pt-2">
-                        <input onBlur={handleBlur} type="text" className="form-control" name="time" placeholder="Enter Visiting Hours" />
+                        <input onBlur={handleBlur} type="text" className="form-control" name="quote" placeholder="Enter your review" />
                     </div>
                     <div className="form-group pt-2">
-                        <input onBlur={handleBlur} type="text" className="form-control" name="price" placeholder="Enter Service Charge" />
+                        <input onBlur={handleBlur} type="text" className="form-control" name="from" placeholder="Where are you from" />
                     </div>
                     <div className="form-group pt-2">
-                        <input onBlur={handleBlur} type="text" className="form-control" name="space" placeholder="Enter Available Space" />
+                        <input onBlur={handleBlur} type="text" className="form-control" name="phone" placeholder="Enter your phone number" />
                     </div>
                     <div className="form-group pt-2">
-                        <label htmlFor="exampleInputPassword1" style={{color: 'white'}}>Upload an image</label>
+                        <label htmlFor="exampleInputPassword1" style={{color: "white"}}>Upload an image</label>
                         <input onChange={handleFileChange} type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
                     </div>
-                    <button type="submit" className="btn btn-outline-primary mt-3 text-uppercase">Update</button>
+                    <button type="submit" className="btn btn-outline-primary mt-3 text-uppercase">Send</button>
                 </form>
             </div>
         </section>
     );
 };
 
-export default AddService;
+export default UserReview;
