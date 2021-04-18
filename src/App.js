@@ -14,6 +14,7 @@ import Appointment from './Components/Home/MakeAppointments/Appointment/Appointm
 import PrivateRoute from './Components/Home/PrivateRoute/PrivateRoute';
 import Login from './Components/Login/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
+import Payment from './Components/Payment/Payment';
 
 export const UserContext = createContext();
 
@@ -35,18 +36,21 @@ function App() {
         <PrivateRoute path="/dashboard">
           <DashBoard/>
         </PrivateRoute>
-        <PrivateRoute path="/dashboard/appointments">
+        <Route path="/dashboard/appointments">
           <DashBoard/>
-        </PrivateRoute>
+        </Route>
         <PrivateRoute path="/dashboard/allappointments">
           <AllUsers/>
         </PrivateRoute>
         <PrivateRoute path="/addService">
             <AddService/>
           </PrivateRoute>
-        <PrivateRoute path="/addreview">
+        <Route path="/addreview">
             <UserReview/>
-          </PrivateRoute>
+          </Route>
+        <Route path="/payment">
+            <Payment/>
+          </Route>
         <Route path="/login">
           <Login/>
         </Route>

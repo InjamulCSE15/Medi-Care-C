@@ -2,7 +2,7 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-        <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+        <div class="container card text-white bg-danger mb-3">
             <div class="card-header">Error ! 404 not found</div>
             <div class="card-body">
                 <h5 class="card-title">Danger card title</h5>
